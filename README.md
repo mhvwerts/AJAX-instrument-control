@@ -2,11 +2,11 @@
 
 ## Introduction
 
-This is an example of how one might remotely control a scientific instrument using a web browser. The instrument would be physically connected (USB, RS232... GPIB, why not?) to a computer that controls it. The computer also runs a web server that provides a way for the web browser client to connect to it. This example is drawn from a small project, in which the 'instrument' was a (Raspberry Pi) camera controlled by a Raspberry Pi computer.
+This is an example of how one might remotely control a scientific instrument using a web browser. The instrument would be physically connected (USB, RS232... GPIB, why not?) to a computer that controls it. The computer then also acts as a web server providing a way for a web-browser to connect to it. 
 
 The remote client computer only needs to have a compatible web browser. The server computer (e.g. the aforementioned Raspberry Pi) runs Python and serves an HTML page to the client web browser. This HTML page contains AJAX-style Javascript. In this context, AJAX means [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)), not [AJAX!](https://www.youtube.com/watch?v=_uyK9mGAFyo)
 
-Documentation is minimal. The code is relatively self-explanatory. It is mainly intended to demonstrate the idea. All the basic functionality for remote control and read-out is there: changing the state of the instrument (setting parameters, triggering acquisition) and transferring recorded data (e.g. image, spectrum) to the client for analysis.
+The present example is drawn from a small project, in which the 'instrument' was a (Raspberry Pi) camera controlled by a Raspberry Pi computer. Documentation is minimal. The code is relatively self-explanatory. It is mainly intended to demonstrate the idea. All the basic functionality for remote control and read-out is there: changing the state of the instrument (setting parameters, triggering acquisition) and transferring recorded data (e.g. image, spectrum) to the client for analysis.
 
 ## Warning!
 
