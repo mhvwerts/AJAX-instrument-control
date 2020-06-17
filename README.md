@@ -6,7 +6,7 @@ This is an example of how one might remotely control a scientific instrument usi
 
 The remote client computer only needs to have a compatible web browser. The server computer (e.g. the aforementioned Raspberry Pi) runs Python and serves an HTML page to the client web browser. This HTML page contains AJAX-style Javascript. In this context, AJAX means [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)), not [AJAX!](https://www.youtube.com/watch?v=_uyK9mGAFyo)
 
-Documentation is minimal. The code is relatively self-explanatory. It is mainly intended to demonstrate the idea.
+Documentation is minimal. The code is relatively self-explanatory. It is mainly intended to demonstrate the idea. All the basic functionality for remote control and read-out is there: changing the state of the instrument (setting parameters, triggering acquisition) and transferring recorded data (e.g. image, spectrum) to the client for analysis.
 
 ## Warning!
 
@@ -25,6 +25,8 @@ and connect your browser to ``localhost:8080`` or to the IP address/port you con
 ## Installation
 
 All the files in the repository should go on the server side, in one and the same directory, from which ``roboserv.py`` is run.
+
+**Note** In the present version, a writable directory called ``/ramdisk`` is required in the root of your filesystem (mount point of the RAM-disk). This location can be changed in the ``roboserv.py`` code. Instructions for setting up the RAM-disk can be found in the ``roboserv.py`` code. If you just run the script "out of the box", it will not work: it needs to be tailored to the specific system you run it on.
 
 On the client side, all that is needed is a compatible web browser software (most recent browsers will work; Firefox recommended).
 
